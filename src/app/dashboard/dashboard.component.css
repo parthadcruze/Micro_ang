@@ -1,0 +1,21 @@
+.card {
+    border-radius: 12px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .content {
+    margin-left: 250px; /* Shift content to the right */
+    margin-top: 60px; /* Below navbar */
+    padding: 20px;
+  }
+  
+  

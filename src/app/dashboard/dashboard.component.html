@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<div class="container mt-4">
+  <h3 class="text-center">Dashboard</h3>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.userName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
