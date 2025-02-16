@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://localhost:7285/login/logging'; 
+  private apilogin = 'https://localhost:7285/login/logging'; 
+  private apisignincreate = 'https://localhost:7285/login/signin'; 
   private apiUrl_get = 'https://localhost:7285/getdata'; 
 
   private getToken(): string | null {
@@ -17,7 +18,11 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   login(userData: any): Observable<any> {
-    return this.http.post(this.apiUrl, userData);
+    return this.http.post(this.apilogin, userData);
+  }
+
+  create_login(userData: any): Observable<any> {
+    return this.http.post(this.apisignincreate, userData);
   }
 
   getData(): Observable<any> {
